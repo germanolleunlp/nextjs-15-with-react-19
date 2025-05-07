@@ -51,7 +51,7 @@ export default function DebouncedAndThrottledInputButtons() {
   }, 1000);
 
   return (
-    <div className="flex w-full gap-2">
+    <div className="flex flex-col gap-4">
       <button type="button"
               ref={debouncedBtn}
               onClick={handleDebounce}

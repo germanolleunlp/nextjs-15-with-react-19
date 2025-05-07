@@ -6,8 +6,8 @@ import BusinessTime from "@/app/exercises/BusinessTime";
 
 export default function Home() {
   return (
-    <div className="flex gap-4 flex-wrap items-start flex-col w-300">
-      <div className="flex gap-4 flex-wrap">
+    <div className="flex gap-4 flex-wrap items-start flex-col">
+      <div className="flex gap-4 flex-wrap align-baseline">
         <DebouncedAndThrottledInput />
         <DebouncedAndThrottledInputButtons />
         <PhoneInput />
