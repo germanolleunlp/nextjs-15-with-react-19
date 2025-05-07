@@ -44,6 +44,7 @@ function calculateBusinessHours(start: Date, end: Date): number {
       const endHours = getEndHours(current, end);
 
       if (endHours > startHours) {
+        // add the worked hours
         totalHours += endHours - startHours;
       }
     }
