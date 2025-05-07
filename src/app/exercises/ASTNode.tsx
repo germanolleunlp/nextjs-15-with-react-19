@@ -96,7 +96,7 @@ export default function ASTNode() {
   const handleExpression = () => {
     if (!expression.trim()) return;
 
-    // setExpression('');
+    setExpression('');
     startTransition(async () => {
       let result = '';
       try {
