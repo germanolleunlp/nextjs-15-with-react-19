@@ -21,9 +21,12 @@ function getStartHours(date: Date): number {
   return hours;
 }
 
-function getEndHours(date: Date, end: Date): number {
-  const isSame = date.toDateString() === end.toDateString();
-  if (isSame) return Math.min(end.getHours(), BUSINESS_END_HOURS);
+function isSameDay(start: Date, end: Date): boolean {
+  return start.toDateString() === end.toDateString();
+}
+
+function getEndHours(start: Date, end: Date): number {
+  if (isSameDay(start, end)) return Math.min(end.getHours(), BUSINESS_END_HOURS);
   return BUSINESS_END_HOURS;
 }
 
