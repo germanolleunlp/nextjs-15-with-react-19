@@ -14,7 +14,7 @@ export default function useThrottle<T>(value: T, interval: number): T {
     const timeout = setTimeout(() => {
       lastExecuted.current = Date.now();
       setThrottleValue(value);
-    }, interval);
+    }, interval - (Date.now() - lastExecuted.current));
 
     return () => clearTimeout(timeout);
   }, [value, interval]);
